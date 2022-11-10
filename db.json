@@ -1,32 +1,25 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Product 1",
-            "price": 100,
-            "quantity": 1
-        },
-        {
-            "id": 2,
-            "name": "Product 2",
-            "price": 200,
-            "quantity": 2
-        }
-    ],
-    "cars": [
-        {
-            "id": 1,
-            "brand": "AUDI",
-            "name": "RS3",
-            "price": 45000,
-            "quantity": 5
-        },
-        {
-            "id": 2,
-            "brand": "AUDI",
-            "name": "RS6",
-            "price": 130000,
-            "quantity": 5
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 100,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 200,
+      "quantity": 2
+    }
+  ],
+  "cars": [
+    {
+      "brand": "AUDI",
+      "name": "RS3",
+      "price": 15000,
+      "quantity": 5,
+      "id": 1
+    }
+  ]
 }

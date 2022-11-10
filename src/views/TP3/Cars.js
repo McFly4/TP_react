@@ -2,12 +2,28 @@ import React from "react";
 import ListContainer from "../../components/ListContainer";
 import { useEffect, useState } from "react";
 import CarsAdd from "./CarsAdd";
+import CarsModify from "./CarsModify";
 
 function ProductItem({ item }) {
+    const deleteCar = async () => {
+        await fetch(`http://localhost:5000/cars/${item.id}`, {
+            method: "DELETE",
+        });
+        window.location.reload();
+    };
+    const modifyCar = async () => {
+        await fetch(`http://localhost:5000/cars/${item.id}`, {
+            method: "PUT",
+        });
+        window.location.reload();
+    };
+
     return (
         <>
             {item.brand} {item.name} - {item.price}€, quantitée :{" "}
-            {item.quantity} <br />
+            {item.quantity} <button onClick={deleteCar}>supprimer</button>
+            <button onclick={modifyCar}>Modifier</button>
+            <br />
         </>
     );
 }

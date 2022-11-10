@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function CarsAdd({ onSubmit }) {
     const [products, setProducts] = useState([]);
+
     const [name, setName] = useState("");
     const [price, setPrice] = useState(0);
     const [quantity, setQuantity] = useState(1);

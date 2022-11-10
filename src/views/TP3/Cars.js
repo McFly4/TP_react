@@ -6,7 +6,8 @@ import CarsAdd from "./CarsAdd";
 function ProductItem({ item }) {
     return (
         <>
-            {item.name} - {item.price}€, quantitée : {item.quantity} <br />
+            {item.brand} {item.name} - {item.price}€, quantitée :{" "}
+            {item.quantity} <br />
         </>
     );
 }
@@ -30,11 +31,8 @@ export default function Cart() {
                 initialItems={products}
                 ListItem={ProductItem}
                 AddForm={CarsAdd}
-                keyProp="product"
+                keyProp="products"
             />
-
-            {/* <ListContainer ListItem={ProductItem} /> */}
-            {/* <CarsAdd ListItem={ProductItem} AddForm={CarsAdd} keyProp="cars" /> */}
         </>
     );
 }

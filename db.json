@@ -17,14 +17,14 @@
         {
             "id": 1,
             "brand": "AUDI",
-            "name": "Audi RS3",
+            "name": "RS3",
             "price": 45000,
             "quantity": 5
         },
         {
             "id": 2,
             "brand": "AUDI",
-            "name": "Audi RS6",
+            "name": "RS6",
             "price": 130000,
             "quantity": 5
         }

@@ -3,33 +3,34 @@ import { useEffect, useState } from "react";
 
 export default function CarsAdd({ onSubmit }) {
     const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch("http://localhost:5000/cars")
-            .then((response) => response.json())
-            .then((data) => {
-                setProducts(data);
-            });
-    }, []);
-
-    const [id, setId] = useState(0);
     const [name, setName] = useState("");
     const [price, setPrice] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const [brand, setBrand] = useState("");
 
-    useEffect(() => {
-        if (!id && products.length) {
-            setId(products[0].id);
-        }
-    }, [products]);
+    // console.log(products.map((product) => product.id));
     function handleSubmit(e) {
         e.preventDefault();
         // Récupération des valeurs du formulaire en JS natif
         //const formData = new FormData(e.target);
         //const itemId = parseInt(formData.get("product"));
         //const quantity = parseInt(formData.get("quantity"));
-        onSubmit({ product: id, name, price, quantity, brand });
+        fetch("http://localhost:5000/cars", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                brand,
+                name,
+                price,
+                quantity,
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                onSubmit(data);
+            });
     }
 
     return (

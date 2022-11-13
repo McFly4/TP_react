@@ -42,101 +42,136 @@ const CarsList = ({
         <>
             <h1>Bienvenu chez Audi </h1>
             <h1>Voici nos voitures sportives : </h1>
-            {cars
-                .filter((car) => car.category === "Sportive")
-                .map((car) => (
-                    <div key={car.id}>
-                        Marque : {car.brand} <br /> Modèle : {car.name} <br />{" "}
-                        Prix : {car.price}€ <br /> Stock : {car.quantity}
-                        <br />
-                        <button
-                            onClick={() => {
-                                deleteCar(car.id);
-                            }}
-                        >
-                            supprimer
-                        </button>
-                        <button
-                            onClick={() => {
-                                getCar(car.id);
-                            }}
-                        >
-                            Modifier
-                        </button>
-                    </div>
-                ))}
+            <div className="container">
+                {cars
+                    .filter((car) => car.category === "Sportive")
+                    .map((car) => (
+                        <div className="card" key={car.id}>
+                            <div className="card__content">
+                                <ul>
+                                    <li>Marque : {car.brand}</li>
+                                    <li>Modèle : {car.name}</li>
+                                    <li>Prix : {car.price}€</li>
+                                    <li>Stock : {car.quantity}</li>
+                                </ul>
+                            </div>
+                            <div className="card__buttons">
+                                <button
+                                    onClick={() => {
+                                        deleteCar(car.id);
+                                    }}
+                                >
+                                    Supprimer
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        getCar(car.id);
+                                    }}
+                                >
+                                    Modifier
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+            </div>
 
             <h1>Voici nos voitures nos berlines : </h1>
-            {cars
-                .filter((car) => car.category === "Berline")
-                .map((car) => (
-                    <div key={car.id}>
-                        Marque : {car.brand} <br /> Modèle : {car.name} <br />{" "}
-                        Prix : {car.price}€ <br /> Stock : {car.quantity}
-                        <br />
-                        <button
-                            onClick={() => {
-                                deleteCar(car.id);
-                            }}
-                        >
-                            supprimer
-                        </button>
-                        <button
-                            onClick={() => {
-                                getCar(car.id);
-                            }}
-                        >
-                            Modifier
-                        </button>
-                    </div>
-                ))}
+            <div className="container">
+                {cars
+                    .filter((car) => car.category === "Berline")
+                    .map((car) => (
+                        <div className="card" key={car.id}>
+                            <div className="card__content">
+                                <ul>
+                                    <li>Marque : {car.brand}</li>
+                                    <li>Modèle : {car.name}</li>
+                                    <li>Prix : {car.price}€</li>
+                                    <li>Stock : {car.quantity}</li>
+                                </ul>
+                            </div>
+                            <div className="card__buttons">
+                                <button
+                                    onClick={() => {
+                                        deleteCar(car.id);
+                                    }}
+                                >
+                                    Supprimer
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        getCar(car.id);
+                                    }}
+                                >
+                                    Modifier
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+            </div>
             <h1>Voici nos 4x4</h1>
-            {cars
-                .filter((car) => car.category === "4x4")
-                .map((car) => (
-                    <div key={car.id}>
-                        Marque : {car.brand} <br /> Modèle : {car.name} <br />{" "}
-                        Prix : {car.price}€ <br /> Stock : {car.quantity}
-                        <br />
-                        <button
-                            onClick={() => {
-                                deleteCar(car.id);
-                            }}
-                        >
-                            supprimer
-                        </button>
-                        <button
-                            onClick={() => {
-                                getCar(car.id);
-                            }}
-                        >
-                            Modifier
-                        </button>
+            <div className="container">
+                {cars
+                    .filter((car) => car.category === "4x4")
+                    .map((car) => (
+                        <div className="card" key={car.id}>
+                            <div className="card__content">
+                                <ul>
+                                    <li>Marque : {car.brand}</li>
+                                    <li>Modèle : {car.name}</li>
+                                    <li>Prix : {car.price}€</li>
+                                    <li>Stock : {car.quantity}</li>
+                                </ul>
+                            </div>
+                            <div className="card__buttons">
+                                <button
+                                    onClick={() => {
+                                        deleteCar(car.id);
+                                    }}
+                                >
+                                    Supprimer
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        getCar(car.id);
+                                    }}
+                                >
+                                    Modifier
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+            </div>
+            <h1>Toutes nos voitures :</h1>
+            <div className="container">
+                {cars.map((car) => (
+                    <div className="card" key={car.id}>
+                        <div className="card__content">
+                            <ul>
+                                <li>Marque : {car.brand}</li>
+                                <li>Modèle : {car.name}</li>
+                                <li>Prix : {car.price}€</li>
+                                <li>Stock : {car.quantity}</li>
+                            </ul>
+                        </div>
+                        <div className="card__buttons">
+                            <button
+                                onClick={() => {
+                                    deleteCar(car.id);
+                                }}
+                            >
+                                Supprimer
+                            </button>
+                            <button
+                                onClick={() => {
+                                    getCar(car.id);
+                                }}
+                            >
+                                Modifier
+                            </button>
+                        </div>
                     </div>
                 ))}
-
-            <h1>Toutes nos voitures :</h1>
-            {cars.map((car) => (
-                <div key={car.id}>
-                    Marque : {car.brand} <br /> Modèle : {car.name} <br /> Prix
-                    : {car.price}€ <br /> Stock : {car.quantity}
-                    <br />
-                    <button
-                        onClick={() => {
-                            deleteCar(car.id);
-                        }}
-                    >
-                        supprimer
-                    </button>
-                    <button
-                        onClick={() => {
-                            getCar(car.id);
-                        }}
-                    >
-                        Modifier
-                    </button>
-                </div>
-            ))}
+            </div>
         </>
     );
 };

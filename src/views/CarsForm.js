@@ -104,6 +104,7 @@ const CarsForm = ({
                     onChange={(e) => setQuantity(parseInt(e.target.value))}
                 />
                 <input
+                    id="submit"
                     type="submit"
                     value={
                         isEdit ? "Modifier une voiture" : "Ajouter une voiture"

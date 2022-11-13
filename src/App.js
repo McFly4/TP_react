@@ -1,7 +1,6 @@
 import { useState } from "react";
 import CarsForm from "./views/CarsForm";
 import CarsList from "./views/CarsList";
-import "./styles/main.css";
 
 function App() {
     const [id, setId] = useState(0);

@@ -40,10 +40,12 @@ const CarsList = ({
 
     return (
         <>
-            <h1>Cars List</h1>
+            <h1>Bienvenu chez Audi </h1>
             {cars.map((car) => (
                 <div key={car.id}>
-                    {car.name} - {car.brand} - {car.price} - {car.quantity}
+                    Marque : {car.brand} <br /> Modèle : {car.name} <br /> Prix
+                    : {car.price}€ <br /> Stock : {car.quantity}
+                    <br />
                     <button
                         onClick={() => {
                             deleteCar(car.id);
@@ -60,14 +62,6 @@ const CarsList = ({
                     </button>
                 </div>
             ))}
-
-            <div className="container">
-                a
-                <div className="container__card">
-                    a b<div className="container__card--title">c</div>
-                    <div className="container__card--content">d</div>
-                </div>
-            </div>
         </>
     );
 };

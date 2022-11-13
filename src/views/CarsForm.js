@@ -59,8 +59,15 @@ const CarsForm = ({
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
+                    name="brand"
+                    placeholder="Marque du véhicule"
+                    value={brand}
+                    onChange={(e) => setBrand(e.target.value)}
+                />
+                <input
+                    type="text"
                     name="name"
-                    placeholder="Nom du véhicule"
+                    placeholder="Modèle du véhicule"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
@@ -71,13 +78,7 @@ const CarsForm = ({
                     value={price}
                     onChange={(e) => setPrice(parseInt(e.target.value))}
                 />
-                <input
-                    type="text"
-                    name="brand"
-                    placeholder="Marque du véhicule"
-                    value={brand}
-                    onChange={(e) => setBrand(e.target.value)}
-                />
+
                 <input
                     type="number"
                     name="quantity"

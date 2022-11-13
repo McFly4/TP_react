@@ -1,32 +1,46 @@
 import { useState } from "react";
-import Cart from "./views/Tp1V2/Cart/Cart";
-import ProductList from "./views/Tp1V2/ProductList";
-import UserForm from "./views/Tp2/Form";
-import Cars from "./views/TP3/Cars";
+import CarsForm from "./views/CarsForm";
+import CarsList from "./views/CarsList";
+import "./styles/main.css";
 
 function App() {
-    const [displayForm, setDisplayForm] = useState(true);
+    const [id, setId] = useState(0);
+    const [name, setName] = useState("");
+    const [price, setPrice] = useState("");
+    const [quantity, setQuantity] = useState("");
+    const [brand, setBrand] = useState("");
+    const [isEdit, setIsEdit] = useState(false);
+
     return (
         <>
-            {/* <ProductList />
-            <Cart />
-            <button onClick={() => setDisplayForm(!displayForm)}>
-                Display
-            </button>
-            {displayForm && <UserForm />}
-            {displayForm && (
-                <UserForm
-                    user={{
-                        firstname: "myfirst",
-                        lastname: "mylast",
-                        email: "myfirst.mylast@email.com",
-                        password: "",
-                        skills: [],
-                        rgpd: false,
-                    }}
-                />
-            )} */}
-            <Cars />
+            <CarsForm
+                name={name}
+                setName={setName}
+                price={price}
+                setPrice={setPrice}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                brand={brand}
+                setBrand={setBrand}
+                isEdit={isEdit}
+                setIsEdit={setIsEdit}
+                id={id}
+                setId={setId}
+            />
+            <CarsList
+                name={name}
+                setName={setName}
+                price={price}
+                setPrice={setPrice}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                brand={brand}
+                setBrand={setBrand}
+                isEdit={isEdit}
+                setIsEdit={setIsEdit}
+                id={id}
+                setId={setId}
+            />
         </>
     );
 }

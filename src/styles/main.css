@@ -1,0 +1,33 @@
+.deux {
+  display: block;
+}
+
+.test {
+  color: red;
+  color: blue;
+}
+
+.az {
+  display: flex;
+}
+
+.container {
+  color: red;
+}
+
+.container .__card {
+  color: blue;
+}
+
+.container {
+  color: green;
+}
+.container__card {
+  color: blue;
+}
+.container__card--title {
+  color: red;
+}
+.container__card--content {
+  color: purple;
+}/*# sourceMappingURL=main.css.map */

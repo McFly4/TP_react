@@ -15,11 +15,25 @@
   ],
   "cars": [
     {
-      "brand": "AUDI",
-      "name": "RS3",
-      "price": 15000,
-      "quantity": 5,
+      "brand": "15",
+      "name": "1",
+      "price": 185,
+      "quantity": 150518181618,
       "id": 1
+    },
+    {
+      "brand": "15",
+      "name": "15",
+      "price": 15,
+      "quantity": 15,
+      "id": 2
+    },
+    {
+      "brand": "15",
+      "name": "15",
+      "price": 15,
+      "quantity": 15,
+      "id": 3
     }
   ]
 }

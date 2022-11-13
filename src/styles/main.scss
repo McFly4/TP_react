@@ -1,0 +1,34 @@
+@forward "./deuxieme.scss";
+
+.test {
+    color: red;
+    color: blue;
+}
+
+.az {
+    display: flex;
+}
+
+.container {
+    color: red;
+}
+
+.container .__card {
+    color: blue;
+}
+
+.container {
+    color: green;
+
+    &__card {
+        color: blue;
+
+        &--title {
+            color: red;
+        }
+
+        &--content {
+            color: purple;
+        }
+    }
+}

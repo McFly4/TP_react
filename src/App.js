@@ -8,6 +8,7 @@ function App() {
     const [price, setPrice] = useState("");
     const [quantity, setQuantity] = useState("");
     const [brand, setBrand] = useState("");
+    const [category, setCategory] = useState("");
     const [isEdit, setIsEdit] = useState(false);
 
     return (
@@ -25,6 +26,8 @@ function App() {
                 setIsEdit={setIsEdit}
                 id={id}
                 setId={setId}
+                category={category}
+                setCategory={setCategory}
             />
             <CarsList
                 name={name}
@@ -39,6 +42,8 @@ function App() {
                 setIsEdit={setIsEdit}
                 id={id}
                 setId={setId}
+                category={category}
+                setCategory={setCategory}
             />
         </>
     );

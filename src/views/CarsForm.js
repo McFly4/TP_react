@@ -9,6 +9,8 @@ const CarsForm = ({
     setQuantity,
     isEdit,
     id,
+    category,
+    setCategory,
 }) => {
     function handleSubmit(e) {
         if (isEdit === false) {
@@ -23,6 +25,7 @@ const CarsForm = ({
                     name,
                     price,
                     quantity,
+                    category,
                 }),
             })
                 .then((response) => response.json())
@@ -44,6 +47,7 @@ const CarsForm = ({
                     name,
                     price,
                     quantity,
+                    category,
                 }),
             })
                 .then((response) => response.json())
@@ -56,7 +60,20 @@ const CarsForm = ({
     }
     return (
         <>
+            {console.log(category)}
             <form onSubmit={handleSubmit}>
+                <select
+                    defaultValue={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                    name="category"
+                    id="category"
+                >
+                    <option value="">Choisir une catégory</option>
+                    <option value="Berline">Berline</option>
+                    <option value="4x4">4x4</option>
+                    <option value="Sportive">Sportive</option>
+                </select>
+
                 <input
                     type="text"
                     name="brand"

@@ -19,6 +19,7 @@
       "name": "RS3",
       "price": 15000,
       "quantity": 5,
+      "category": "Sportive",
       "id": 1
     },
     {
@@ -26,7 +27,32 @@
       "name": "RS4",
       "price": 15000,
       "quantity": 2,
+      "category": "Sportive",
       "id": 2
+    },
+    {
+      "brand": "Audi",
+      "name": "RS7",
+      "price": 45000,
+      "quantity": 5,
+      "category": "Sportive",
+      "id": 3
+    },
+    {
+      "brand": "Audi",
+      "name": "A8",
+      "price": 150000,
+      "quantity": 10,
+      "category": "Berline",
+      "id": 4
+    },
+    {
+      "brand": "Audi",
+      "name": "RSQ3",
+      "price": 200000,
+      "quantity": 2,
+      "category": "4x4",
+      "id": 5
     }
   ]
 }
